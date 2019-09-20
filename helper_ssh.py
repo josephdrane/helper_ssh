@@ -83,6 +83,12 @@ class Ssh:
 
                 return buffer
 
+    def put_file(
+        self, localpath: str, remotepath: str, callback=None, confirm=False
+    ) -> None:
+        sftp_session = paramiko.sftp_client.SFTPClient(self.ssh_channel)
+        sftp_session.put(localpath, remotepath, callback, confirm)
+
     def exit(self):
         """ TODO: Add a docstring here.
         """
