@@ -75,7 +75,7 @@ class Ssh:
                         error = (
                             f"Timeout exceeded while attempting to read "
                             f"response after issuing {command} to {self.device}"
-                            )
+                        )
                         raise Exception(error)
                     buffer += resp.decode("utf-8")
                 else:
