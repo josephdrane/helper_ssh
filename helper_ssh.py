@@ -11,8 +11,8 @@ import paramiko
 
 class Ssh:
     """ Example:
-    import helper_ssh
-    conn = helper_ssh.ssh('10.10.10.10','some.Username','somePassword')
+    from helper_ssh import Ssh as ssh
+    conn = ssh('10.10.10.10','some.Username','somePassword')
     commands = ['cat /etc/centos-release | grep Cent', 'cat /etc/issue', 'cat /proc/version']
     response = conn.commands(commands=commands, sudo=True)
     commands = ['cat /etc/issue','cat /proc/version']
